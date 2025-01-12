@@ -39,17 +39,13 @@ function getIntervalArray(/* start, end */) {
  */
 function sumArrays(arr1, arr2) {
   const maxLength = Math.max(arr1.length, arr2.length);
-  const result = [];
-
-  for (let i = 0; i < maxLength; i += 1) {
+  return Array.from({ length: maxLength }, (_, i) => {
     const el1 = arr1[i] !== undefined ? arr1[i] : 0;
     const el2 = arr2[i] !== undefined ? arr2[i] : 0;
     result.push(el1 + el2);
   }
-
-  return result;
-}
-
+    return el1 + el2;
+  });
 /**
  * Returns an index of the specified element in array or -1 if element is not found.
  *
