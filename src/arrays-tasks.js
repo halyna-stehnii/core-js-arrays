@@ -42,10 +42,10 @@ function sumArrays(arr1, arr2) {
   return Array.from({ length: maxLength }, (_, i) => {
     const el1 = arr1[i] !== undefined ? arr1[i] : 0;
     const el2 = arr2[i] !== undefined ? arr2[i] : 0;
-    result.push(el1 + el2);
-  }
     return el1 + el2;
   });
+}
+
 /**
  * Returns an index of the specified element in array or -1 if element is not found.
  *
@@ -215,8 +215,8 @@ function getTail(/* arr, n */) {
  *    doubleArray([0, 1, 2, 3, 4, 5]) => [0, 1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5]
  *    doubleArray([]) => []
  */
-function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
+function doubleArray(arr) {
+  return arr.concat(arr);
 }
 
 /**
